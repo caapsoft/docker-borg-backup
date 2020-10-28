@@ -4,6 +4,8 @@ services:
     container_name: borg
     hostname: borg
     build: .
+    ports:
+      - "222:22"
     environment:
       - BORG_AUTHORIZED_KEYS=<ssh_authorized_key>
       - BORG_UID=<uid>
