@@ -1,0 +1,13 @@
+version: '3'
+services:
+  borg:
+    container_name: borg
+    hostname: borg
+    build: .
+    environment:
+      - BORG_AUTHORIZED_KEYS=<ssh_authorized_key>
+      - BORG_UID=<uid>
+      - BORG_GID=<gid>
+    restart: unless-stopped
+    volumes:
+      - /var/backups/borg:/var/backups/borg
