@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:10
 
 ENV BORG_VERSION=1.1.14
 
